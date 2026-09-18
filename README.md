@@ -14,7 +14,7 @@ OpsPilot 面向企业内部 IT 服务与故障处置场景，将用户的一段�
 
 ### 智能诊断
 
-![OpsPilot 智能诊断](tools/ui-qa/artifacts/05-live-diagnosis-desktop.png)
+![OpsPilot 智能诊断](tools/ui-qa/artifacts/04-evaluation-desktop.png)
 
 ## 核心能力
 
