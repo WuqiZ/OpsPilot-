@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-09-16T14:42:41.360Z",
+  "base": "http://localhost",
+  "live": false,
+  "checks": [
+    {
+      "name": "Liquid Glass tokens, frosted navigation and readable desktop typography",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "name": "Dashboard shows live platform counts",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "name": "Knowledge list, source filter, detail and add form",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "name": "Six Agent roles and registered Skill content",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "name": "Saved evaluation: 200 cases, 4 failures, expandable evidence; no new evaluation run",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "name": "Clarification state and escaped model HTML (explicit fixture)",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "name": "Mobile width: overview",
+      "detail": "390 px; no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile width: knowledge",
+      "detail": "390 px; no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile width: agents",
+      "detail": "390 px; no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile width: evaluation",
+      "detail": "390 px; no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile width: diagnosis",
+      "detail": "390 px; no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile width: history",
+      "detail": "390 px; no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile drawer navigation",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "name": "Keyboard skip link focuses main content without changing the route",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "name": "Responsive layout across six pages",
+      "detail": "320 px; no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Responsive layout across six pages",
+      "detail": "768 px; no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Responsive layout across six pages",
+      "detail": "1024 px; no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Service error state does not fabricate live counts",
+      "detail": "",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

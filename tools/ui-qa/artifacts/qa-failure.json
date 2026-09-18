@@ -1,0 +1,16 @@
+{
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 6\n\n    at file:///D:/Program/EchoMind/tools/ui-qa/check.mjs:45:10",
+  "checks": [
+    {
+      "name": "Dashboard shows live platform counts",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "name": "Knowledge list, source filter, detail and add form",
+      "detail": "",
+      "passed": true
+    }
+  ],
+  "errors": []
+}
