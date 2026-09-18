@@ -1,0 +1,5 @@
+/* OpsPilot Liquid Glass design system. Order: tokens → layout → components → responsive. */
+@import url('/assets/styles/tokens.css');
+@import url('/assets/styles/layout.css');
+@import url('/assets/styles/components.css');
+@import url('/assets/styles/responsive.css');

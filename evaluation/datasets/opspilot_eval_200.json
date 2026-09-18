@@ -1,0 +1,1218 @@
+{
+  "metadata": {
+    "name": "opspilot_eval_200",
+    "version": "1.0.0",
+    "expected_total": 200,
+    "provenance": "expert_curated_synthetic_offline_regression",
+    "description": "依据项目意图分类与路由规则设计并标注的企业 IT 故障合成回归集，不含真实生产工单。",
+    "limitations": [
+      "不代表真实企业流量分布",
+      "LLM-as-a-Judge 分数存在模型偏差",
+      "知识库仅覆盖仓库内置的 7 篇 SOP 与历史案例"
+    ],
+    "breakdown": {
+      "intent": 100,
+      "routing": 50,
+      "retrieval": 25,
+      "dialog": 25
+    }
+  },
+  "intent_cases": [
+    {
+      "message": "总部 VPN 输入验证码后一直连接超时",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "无线网频繁掉线，每隔五分钟断一次",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "访问内网域名提示 DNS 解析失败",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "办公区网络延迟很高并伴随丢包",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "电脑无法通过 DHCP 获取 IP 地址",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "代理服务器连接失败，网页打不开",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "只有研发网段访问代码仓库超时",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "视频会议卡顿但本地 CPU 正常",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "网线已连接但系统显示无网络",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "VPN 能拨号但无法访问内部系统",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "公司 WiFi 显示已连接却不能上网",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "到业务服务器的路由追踪中断",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "远程桌面连接内网主机超时",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "上午开始整个楼层无法访问外网",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "固定 IP 配置后网关不可达",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "网络测速正常但访问办公系统延迟十秒",
+      "expected_intent": "network",
+      "expect_clarification": false
+    },
+    {
+      "message": "登录统一门户提示账号或密码错误",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "访问项目页面返回 403 没有权限",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "SSO 跳转后反复回到登录页面",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "MFA 验证码正确但认证失败",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "新员工账号还没有邮箱权限",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "密码重置后旧会话仍提示 401",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "LDAP 账号被锁定无法登录电脑",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "同事能打开报表而我的账号被拒绝",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "申请的管理员权限今天突然消失",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "企业微信登录提示用户未授权",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "离职转岗后仍需开通新部门系统权限",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "账号登录时提示凭证已经过期",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "共享目录提示无权访问该资源",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "新建用户无法加入指定用户组",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "单点登录令牌校验不通过",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "工号可以登录邮箱但不能进入 OA",
+      "expected_intent": "identity_access",
+      "expect_clarification": false
+    },
+    {
+      "message": "Office 升级后打开文档立即崩溃",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "业务客户端启动时报缺少运行库",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "安装应用时返回错误码 1603",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "浏览器更新后插件无法加载",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "财务软件保存时持续闪退",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "Windows 补丁安装到一半失败",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "Python 程序启动提示依赖包缺失",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "应用版本回滚后配置文件不兼容",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "邮件客户端无法同步但网页版正常",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "杀毒软件更新后占用大量 CPU",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "IDE 启动时卡在加载插件界面",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "数据库管理工具执行查询时报 500",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "客户端自动更新反复下载失败",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "操作系统更新后应用界面变成空白",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "软件许可证服务启动失败",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "安装包提示当前系统版本不受支持",
+      "expected_intent": "software",
+      "expect_clarification": false
+    },
+    {
+      "message": "办公区打印机显示离线无法打印",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "笔记本开机后出现蓝屏错误码",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "外接显示器没有信号但电源正常",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "键盘部分按键突然没有反应",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "移动硬盘插入后系统无法识别",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "鼠标连接后指针持续漂移",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "电脑风扇高速转动并自动关机",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "会议室摄像头画面全黑",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "打印机卡纸清理后仍然报警",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "扩展坞无法识别网口和显示器",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "笔记本电池充不进电",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "扫描仪工作时出现竖条纹",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "USB 耳机只有一侧有声音",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "电脑硬盘发出异响且读写很慢",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "门禁读卡器指示灯不亮",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "投影仪开机后颜色显示异常",
+      "expected_intent": "device",
+      "expect_clarification": false
+    },
+    {
+      "message": "我点击了钓鱼邮件里的链接",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "账号半夜出现异地异常登录",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "电脑弹出勒索提示要求付款",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "终端检测到木马文件告警",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "怀疑客户数据被误发到外部邮箱",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "服务器日志出现大量暴力破解记录",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "U 盘插入后杀毒软件提示恶意程序",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "同事收到冒充领导的转账邮件",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "发现公开链接可能泄露内部文档",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "浏览器提示证书被未知机构替换",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "员工电脑疑似被远程控制",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "安全平台报告主机存在入侵行为",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "邮箱自动向联系人发送可疑附件",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "我把验证码发给了陌生人",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "数据库审计发现未授权导出记录",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "办公账号收到密码喷洒攻击告警",
+      "expected_intent": "security",
+      "expect_clarification": false
+    },
+    {
+      "message": "帮我看一下",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "这个东西不好用了",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "系统好像有点问题",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "麻烦尽快处理",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "刚才又失败了",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "我这里不太正常",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "能帮忙恢复吗",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "出现了一个提示",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "今天用不了",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "请协助排查一下",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "还是和昨天一样",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "有人遇到问题了",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "页面不对劲",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "操作没有成功",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "突然就停了",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "现在该怎么办",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "功能似乎异常",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "需要技术支持",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "请帮我修复这个故障",
+      "expected_intent": "other",
+      "expect_clarification": true
+    },
+    {
+      "message": "为什么一直不行",
+      "expected_intent": "other",
+      "expect_clarification": true
+    }
+  ],
+  "routing_cases": [
+    {
+      "message": "VPN 网关连接超时",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "DNS 无法解析办公域名",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "WiFi 丢包导致会议卡顿",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "DHCP 没有分配 IP",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "代理服务器访问失败",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "账号登录提示 401",
+      "intent": "identity_access",
+      "expected_primary": "identity_access",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "项目页面提示 403 无权限",
+      "intent": "identity_access",
+      "expected_primary": "identity_access",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "SSO 认证循环失败",
+      "intent": "identity_access",
+      "expected_primary": "identity_access",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "MFA 验证后账号仍被拒绝",
+      "intent": "identity_access",
+      "expected_primary": "identity_access",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "LDAP 用户组授权未生效",
+      "intent": "identity_access",
+      "expected_primary": "identity_access",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "Office 程序启动崩溃",
+      "intent": "software",
+      "expected_primary": "software",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "客户端升级后持续闪退",
+      "intent": "software",
+      "expected_primary": "software",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "应用安装提示依赖缺失",
+      "intent": "software",
+      "expected_primary": "software",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "软件补丁更新失败",
+      "intent": "software",
+      "expected_primary": "software",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "浏览器插件加载报错",
+      "intent": "software",
+      "expected_primary": "software",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "打印机设备显示离线",
+      "intent": "device",
+      "expected_primary": "device",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "笔记本电脑启动蓝屏",
+      "intent": "device",
+      "expected_primary": "device",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "外接显示器没有信号",
+      "intent": "device",
+      "expected_primary": "device",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "移动硬盘无法识别",
+      "intent": "device",
+      "expected_primary": "device",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "键盘和鼠标同时失灵",
+      "intent": "device",
+      "expected_primary": "device",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "员工点击钓鱼链接",
+      "intent": "security",
+      "expected_primary": "security",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "终端发现勒索病毒",
+      "intent": "security",
+      "expected_primary": "security",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "账号出现异地异常登录",
+      "intent": "security",
+      "expected_primary": "security",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "内部文件疑似泄露",
+      "intent": "security",
+      "expected_primary": "security",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "主机检测到木马入侵",
+      "intent": "security",
+      "expected_primary": "security",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "VPN 连接成功但账号登录提示 401",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [
+        "identity_access"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "网络正常但 VPN 用户权限被拒绝",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [
+        "identity_access"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "VPN 客户端升级后程序闪退",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [
+        "software"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "代理客户端安装后无法访问网络",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [
+        "software"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "打印机 IP 网关不可达",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [
+        "device"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "会议室摄像头通过网络访问超时",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [
+        "device"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "VPN 页面疑似遭到钓鱼攻击",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [
+        "security"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "网络出口发现入侵流量告警",
+      "intent": "network",
+      "expected_primary": "network",
+      "expected_secondary": [
+        "security"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "账号登录后业务客户端报错",
+      "intent": "identity_access",
+      "expected_primary": "identity_access",
+      "expected_secondary": [
+        "software"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "用户权限正常但应用程序持续闪退",
+      "intent": "identity_access",
+      "expected_primary": "identity_access",
+      "expected_secondary": [
+        "software"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "账号可以登录但门禁设备无响应",
+      "intent": "identity_access",
+      "expected_primary": "identity_access",
+      "expected_secondary": [
+        "device"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "打印机账号认证通过后设备仍离线",
+      "intent": "identity_access",
+      "expected_primary": "identity_access",
+      "expected_secondary": [
+        "device"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "账号出现异常登录安全告警",
+      "intent": "identity_access",
+      "expected_primary": "identity_access",
+      "expected_secondary": [
+        "security"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "用户权限被未知人员恶意修改",
+      "intent": "identity_access",
+      "expected_primary": "identity_access",
+      "expected_secondary": [
+        "security"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "打印机驱动升级后设备离线",
+      "intent": "software",
+      "expected_primary": "software",
+      "expected_secondary": [
+        "device"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "系统更新后外接显示器无信号",
+      "intent": "software",
+      "expected_primary": "software",
+      "expected_secondary": [
+        "device"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "邮件客户端自动发送钓鱼附件",
+      "intent": "software",
+      "expected_primary": "software",
+      "expected_secondary": [
+        "security"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "应用安装包被检测为木马",
+      "intent": "software",
+      "expected_primary": "software",
+      "expected_secondary": [
+        "security"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "打印机缓存中发现敏感文件泄露",
+      "intent": "device",
+      "expected_primary": "device",
+      "expected_secondary": [
+        "security"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "电脑硬盘出现勒索病毒告警",
+      "intent": "device",
+      "expected_primary": "device",
+      "expected_secondary": [
+        "security"
+      ],
+      "entities": {}
+    },
+    {
+      "message": "请帮忙看一下具体情况",
+      "intent": "other",
+      "expected_primary": "triage",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "这个功能刚才没成功",
+      "intent": "other",
+      "expected_primary": "triage",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "今天好像有异常",
+      "intent": "other",
+      "expected_primary": "triage",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "能否协助处理当前问题",
+      "intent": "other",
+      "expected_primary": "triage",
+      "expected_secondary": [],
+      "entities": {}
+    },
+    {
+      "message": "这里出现了一个提示",
+      "intent": "other",
+      "expected_primary": "triage",
+      "expected_secondary": [],
+      "entities": {}
+    }
+  ],
+  "retrieval_cases": [
+    {
+      "query": "VPN 一直超时应该先检查哪些项目",
+      "expected_titles": [
+        "VPN 连接故障排查 SOP"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "远程办公隧道无法建立如何排查",
+      "expected_titles": [
+        "VPN 连接故障排查 SOP"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "多人连接企业 VPN 失败需要记录什么",
+      "expected_titles": [
+        "VPN 连接故障排查 SOP"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "VPN 故障能否让用户提供 Token",
+      "expected_titles": [
+        "VPN 连接故障排查 SOP"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "401 与 403 分别应该怎么定位",
+      "expected_titles": [
+        "账号权限故障排查 SOP"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "单个用户没有共享目录权限怎么检查",
+      "expected_titles": [
+        "账号权限故障排查 SOP"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "账号凭证过期和资源授权的排查顺序",
+      "expected_titles": [
+        "账号权限故障排查 SOP"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "批量权限变更需要遵守什么原则",
+      "expected_titles": [
+        "账号权限故障排查 SOP"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "软件崩溃需要采集哪些环境信息",
+      "expected_titles": [
+        "终端与软件故障采集规范"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "设备故障报修要记录型号和什么信息",
+      "expected_titles": [
+        "终端与软件故障采集规范"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "系统升级后蓝屏应如何无损排查",
+      "expected_titles": [
+        "终端与软件故障采集规范"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "应用安装失败需要提供版本和错误码吗",
+      "expected_titles": [
+        "终端与软件故障采集规范"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "点击钓鱼链接后第一步如何处置",
+      "expected_titles": [
+        "安全事件处置原则"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "发现恶意软件后能否直接格式化电脑",
+      "expected_titles": [
+        "安全事件处置原则"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "异常登录事件如何隔离并保留证据",
+      "expected_titles": [
+        "安全事件处置原则"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "内部数据泄露应该升级给哪个团队",
+      "expected_titles": [
+        "安全事件处置原则"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "全公司 VPN 认证失败的历史根因",
+      "expected_titles": [
+        "历史案例：VPN 全员认证失败"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "LDAP 证书过期导致远程接入失败案例",
+      "expected_titles": [
+        "历史案例：VPN 全员认证失败"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "多人 VPN 失败但普通网络正常如何定位",
+      "expected_titles": [
+        "历史案例：VPN 全员认证失败"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "软件升级后缺少运行库的处置案例",
+      "expected_titles": [
+        "历史案例：升级后客户端崩溃"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "客户端更新后启动即崩溃如何回滚验证",
+      "expected_titles": [
+        "历史案例：升级后客户端崩溃"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "应用灰度发布前应验证哪些核心功能",
+      "expected_titles": [
+        "历史案例：升级后客户端崩溃"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "同楼层多人打印机离线的历史原因",
+      "expected_titles": [
+        "历史案例：打印机显示离线"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "DHCP 地址变更导致打印队列离线案例",
+      "expected_titles": [
+        "历史案例：打印机显示离线"
+      ],
+      "top_k": 4
+    },
+    {
+      "query": "打印机面板正常但队列不可用怎么查",
+      "expected_titles": [
+        "历史案例：打印机显示离线"
+      ],
+      "top_k": 4
+    }
+  ],
+  "dialog_cases": [
+    {
+      "question": "从早上开始五名员工连接公司 VPN 都超时，家庭网络正常",
+      "expected_primary": "network",
+      "min_overall": 0.75
+    },
+    {
+      "question": "办公区 WiFi 每隔几分钟断开一次，其他楼层没有问题",
+      "expected_primary": "network",
+      "min_overall": 0.75
+    },
+    {
+      "question": "访问内网域名提示无法解析，但直接访问 IP 正常",
+      "expected_primary": "network",
+      "min_overall": 0.75
+    },
+    {
+      "question": "研发网段到代码仓库持续丢包，普通网页访问正常",
+      "expected_primary": "network",
+      "min_overall": 0.75
+    },
+    {
+      "question": "固定 IP 后网关不可达，改回自动获取仍未恢复",
+      "expected_primary": "network",
+      "min_overall": 0.75
+    },
+    {
+      "question": "我的账号访问项目返回 403，同组同事可以正常访问",
+      "expected_primary": "identity_access",
+      "min_overall": 0.75
+    },
+    {
+      "question": "密码重置后统一登录仍提示凭证过期",
+      "expected_primary": "identity_access",
+      "min_overall": 0.75
+    },
+    {
+      "question": "新员工邮箱已开通，但 OA 提示用户未授权",
+      "expected_primary": "identity_access",
+      "min_overall": 0.75
+    },
+    {
+      "question": "MFA 验证码通过后又被跳回登录页",
+      "expected_primary": "identity_access",
+      "min_overall": 0.75
+    },
+    {
+      "question": "共享目录只有我提示没有访问权限，昨天还能使用",
+      "expected_primary": "identity_access",
+      "min_overall": 0.75
+    },
+    {
+      "question": "Office 更新后打开任意文档都会立即崩溃",
+      "expected_primary": "software",
+      "min_overall": 0.75
+    },
+    {
+      "question": "财务客户端启动提示缺少 DLL 运行库",
+      "expected_primary": "software",
+      "min_overall": 0.75
+    },
+    {
+      "question": "Windows 补丁安装到 70% 返回错误并回滚",
+      "expected_primary": "software",
+      "min_overall": 0.75
+    },
+    {
+      "question": "浏览器升级后业务插件无法加载，隐私窗口也一样",
+      "expected_primary": "software",
+      "min_overall": 0.75
+    },
+    {
+      "question": "邮件客户端从今天开始无法同步，网页版收发正常",
+      "expected_primary": "software",
+      "min_overall": 0.75
+    },
+    {
+      "question": "办公区打印机面板正常但所有任务都显示离线",
+      "expected_primary": "device",
+      "min_overall": 0.75
+    },
+    {
+      "question": "笔记本开机出现蓝屏 0x0000007E，安全模式可进入",
+      "expected_primary": "device",
+      "min_overall": 0.75
+    },
+    {
+      "question": "扩展坞连接后显示器和 USB 都无法识别",
+      "expected_primary": "device",
+      "min_overall": 0.75
+    },
+    {
+      "question": "移动硬盘接入两台电脑都没有盘符",
+      "expected_primary": "device",
+      "min_overall": 0.75
+    },
+    {
+      "question": "会议室摄像头电源灯亮但画面一直全黑",
+      "expected_primary": "device",
+      "min_overall": 0.75
+    },
+    {
+      "question": "我刚点击了疑似钓鱼邮件的链接并输入了账号",
+      "expected_primary": "security",
+      "min_overall": 0.75
+    },
+    {
+      "question": "安全平台提示电脑检测到勒索软件行为",
+      "expected_primary": "security",
+      "min_overall": 0.75
+    },
+    {
+      "question": "邮箱凌晨出现境外异常登录且自动发送邮件",
+      "expected_primary": "security",
+      "min_overall": 0.75
+    },
+    {
+      "question": "员工把包含客户信息的文件发到了外部群聊",
+      "expected_primary": "security",
+      "min_overall": 0.75
+    },
+    {
+      "question": "服务器日志显示同一来源持续尝试暴力破解",
+      "expected_primary": "security",
+      "min_overall": 0.75
+    }
+  ]
+}

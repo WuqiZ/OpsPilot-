@@ -1,0 +1,89 @@
+:root {
+  color-scheme: light;
+  --bg-primary: #f8fbff;
+  --bg-secondary: #edf3fc;
+  --glass-bg: rgba(255, 255, 255, 0.58);
+  --glass-bg-soft: rgba(255, 255, 255, 0.38);
+  --glass-bg-raised: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-highlight: rgba(255, 255, 255, 0.92);
+  --line: rgba(94, 117, 150, 0.12);
+  --text-primary: #18202a;
+  --text-secondary: #667085;
+  --text-muted: #7f8ba0;
+  --accent: #4f7cff;
+  --accent-hover: #436de3;
+  --accent-soft: rgba(79, 124, 255, 0.09);
+  --accent-gradient: linear-gradient(135deg, #5988f8 0%, #7278ee 100%);
+  --success: #348268;
+  --success-bg: rgba(55, 156, 117, 0.08);
+  --warning: #986d24;
+  --warning-bg: rgba(205, 151, 60, 0.1);
+  --error: #b14e5c;
+  --error-bg: rgba(204, 91, 110, 0.08);
+  --shadow-soft: 0 8px 32px rgba(41, 65, 104, 0.055);
+  --shadow-raised: 0 14px 36px rgba(41, 65, 104, 0.09);
+  --shadow-inset: inset 0 1px 0 var(--glass-highlight), inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 24px;
+  --blur-glass: blur(20px) saturate(150%);
+  --font: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --sidebar-width: 224px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --motion: 200ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text-primary);
+  background:
+    radial-gradient(ellipse at 73% 3%, rgba(145, 188, 249, 0.22), transparent 44%),
+    radial-gradient(ellipse at 96% 70%, rgba(183, 172, 237, 0.15), transparent 40%),
+    radial-gradient(ellipse at 3% 89%, rgba(173, 224, 237, 0.13), transparent 37%),
+    linear-gradient(135deg, #f8fbff 0%, #eef5ff 45%, #f7f5ff 100%);
+  font: 14px/1.6 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+button, input, textarea, select { font: inherit; color: inherit; }
+button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+button, a { touch-action: manipulation; }
+button { cursor: pointer; }
+button:disabled { cursor: wait; opacity: 0.55; }
+button, a { transition: background var(--motion), color var(--motion), box-shadow var(--motion), transform var(--motion); }
+button:not(:disabled):active { transform: scale(0.98); }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p { margin: 0; }
+strong { font-weight: 600; }
+button:focus-visible, a:focus-visible, summary:focus-visible {
+  outline: 3px solid rgba(79, 124, 255, 0.45);
+  outline-offset: 4px;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: rgba(80, 120, 255, 0.45) !important;
+  box-shadow: 0 0 0 3px rgba(80, 120, 255, 0.08);
+}
+::selection { background: rgba(79, 124, 255, 0.19); }
+.icon { width: 20px; height: 20px; flex-shrink: 0; vertical-align: middle; }
+svg { overflow: visible; }
+button .icon { pointer-events: none; }
+.muted { color: var(--text-secondary); }
+.nowrap { white-space: nowrap; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+.skip-link { position: fixed; top: 16px; left: 24px; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); padding: 12px 20px; border-radius: 12px; background: var(--accent); color: white; z-index: 100; }
+.skip-link:focus { width: auto; height: auto; clip-path: none; }
+.mint, .blue, .purple, .orange, .rose { color: #6580b1; background: var(--accent-soft); }
+.full-width { width: 100%; }
+.spin { animation: spin 1.5s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes reveal { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes modal-in { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
